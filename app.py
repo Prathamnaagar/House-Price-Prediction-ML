@@ -1,12 +1,11 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import joblib
-import pickle
 
 # Load model
-with open("house_price_model.pkl", "rb") as file:
-    model = pickle.load(file)
+import joblib
+
+model = joblib.load("house_price_model.pkl")
 
 feature_names = joblib.load("feature_names.pkl")
 
